@@ -1,7 +1,13 @@
 import "@/styles/globals.css";
-
-import { GeistSans } from "geist/font/sans";
+import Providers from "./components/providers";
 import { type Metadata } from "next";
+import { Radio_Canada_Big } from "next/font/google";
+
+const radioCanadaBig = Radio_Canada_Big({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-radio-canada-big",
+});
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -13,8 +19,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${radioCanadaBig.variable}`}>
+      <body className="h-screen antialiased">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
