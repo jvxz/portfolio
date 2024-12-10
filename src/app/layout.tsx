@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import Providers from "./components/providers";
 import { type Metadata } from "next";
 import { Radio_Canada_Big } from "next/font/google";
+import Particles from "@/components/ui/particles";
 
 const radioCanadaBig = Radio_Canada_Big({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${radioCanadaBig.variable}`}>
       <body className="h-screen antialiased">
+        <Particles />
         <Providers>{children}</Providers>
       </body>
     </html>
