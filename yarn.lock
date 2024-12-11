@@ -2746,6 +2746,11 @@ tailwindcss-animate@^1.0.7:
   resolved "https://registry.yarnpkg.com/tailwindcss-animate/-/tailwindcss-animate-1.0.7.tgz#318b692c4c42676cc9e67b19b78775742388bef4"
   integrity sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==
 
+tailwindcss-motion@^0.4.5-beta:
+  version "0.4.5-beta"
+  resolved "https://registry.yarnpkg.com/tailwindcss-motion/-/tailwindcss-motion-0.4.5-beta.tgz#27601546b55aa85441037520a03301a743ab6b50"
+  integrity sha512-XgFUvksXHDuZ33+GtUcSDhK6yYDbprc0JxiT6OgPoxPwnxKqNYRl/MQhZqPF7sGyRMgGWBkMe+r+mdlRavbonA==
+
 tailwindcss@^3.4.3:
   version "3.4.16"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.4.16.tgz#35a7c3030844d6000fc271878db4096b6a8d2ec9"

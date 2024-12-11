@@ -1,4 +1,14 @@
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ExternalLink } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -18,17 +28,58 @@ export default function Page() {
             <Button variant="ghost">contact</Button>
           </div>
         </section>
+        <section className="prose dark:prose-invert">
+          <p>
+            hello! i am an aspiring web developer based in north georgia. i
+            enjoy using my time by coming up with new ideas or building ideas i
+            have written down.
+          </p>
+          <p>
+            coding has been an aspiration of mine since i was in high school,
+            but i never took it seriously until 2024. i now work every day to
+            improve my skills!
+          </p>
+        </section>
       </article>
+      {/* <article className="prose dark:prose-invert"></article> */}
       <article className="prose dark:prose-invert">
-        <p>
-          hello! i am an aspiring web developer based in north georgia. i enjoy
-          using my time by coming up with new ideas or building ideas i have
-          written down.
-        </p>
-      </article>
-      <article className="prose dark:prose-invert">
-        <h3>projects</h3>
-        <div className="flex gap-2 *:flex-1"></div>
+        <h2>projects</h2>
+        <div className="flex gap-4 *:flex-1">
+          <Card>
+            <CardHeader>
+              <CardTitle>tagify</CardTitle>
+              <CardDescription>online audio metadata editor</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>
+                tagify is a web app that makes it easy for you to edit the id3
+                metadata tags in your audio files!
+              </p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <Link
+                className="w-fit no-underline underline-offset-4 hover:underline"
+                target="_blank"
+                href="https://pinch.twirl.sh"
+              >
+                <CardTitle className="flex items-center gap-2">
+                  tagify
+                  <ExternalLink className="size-5" />
+                </CardTitle>
+              </Link>
+              <CardDescription>online mobile wallpaper cropper</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>
+                pinch is a simple web app that allows you to crop your mobile
+                wallpapers to your desired size!
+              </p>
+              <div className="flex items-center gap-2"></div>
+            </CardContent>
+          </Card>
+        </div>
       </article>
     </main>
   );
