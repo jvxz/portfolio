@@ -1,6 +1,7 @@
 import MotionItem from "@/app/components/motion/motion-item";
 import { Button } from "@/components/ui/button";
 import { Asterisk } from "lucide-react";
+import Link from "next/link";
 
 const item = {
   hidden: {
@@ -30,9 +31,9 @@ export default function IndexProfile() {
           </h2>
         </div>
         <div className="flex gap-1">
-          <Button variant="ghost">profile</Button>
-          <Button variant="ghost">projects</Button>
-          <Button variant="ghost">contact</Button>
+          <Button asChild variant="ghost">
+            <Link href="/contact">contact</Link>
+          </Button>
         </div>
       </section>
       <section className="prose dark:prose-invert">
