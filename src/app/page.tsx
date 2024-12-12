@@ -6,22 +6,40 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
+import { Asterisk, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import MotionParent from "./components/motion/motion-parent";
 import MotionItem from "./components/motion/motion-item";
 
 const container = {
-  initial: { opacity: 0, y: 5 },
-  animate: { opacity: 1, y: 0, transition: { delayChildren: 0.2 } },
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.125,
+    },
+  },
+};
+
+const item = {
+  hidden: {
+    opacity: 0,
+    y: 27.5,
+    transition: { duration: 0.45, type: "spring", bounce: 0.5 },
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, type: "spring", bounce: 0.5 },
+  },
 };
 
 export default function Page() {
   return (
     <MotionParent
       variants={container}
-      initial="initial"
-      animate="animate"
+      initial="hidden"
+      animate="show"
       className="container absolute inset-0 mx-auto mt-32 flex max-w-[625] flex-col gap-12"
     >
       <MotionItem className="flex flex-col gap-6">
@@ -53,7 +71,7 @@ export default function Page() {
         </section>
       </MotionItem>
       {/* <article className="prose dark:prose-invert"></article> */}
-      <MotionItem className="prose dark:prose-invert">
+      <MotionItem variants={item} className="prose dark:prose-invert">
         <h2>projects</h2>
         <div className="flex gap-4 *:flex-1">
           <Card>

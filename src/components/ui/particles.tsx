@@ -1,7 +1,8 @@
 "use client";
-
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState } from "react";
+import { useTheme } from "next-themes";
 
 interface MousePosition {
   x: number;
@@ -68,6 +69,7 @@ const Particles: React.FC<ParticlesProps> = ({
   vx = 0,
   vy = 0,
 }) => {
+  const { theme } = useTheme();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
@@ -274,13 +276,18 @@ const Particles: React.FC<ParticlesProps> = ({
   };
 
   return (
-    <div
+    <motion.div
       className={cn("pointer-events-none", className)}
       ref={canvasContainerRef}
       aria-hidden="true"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 2.5,
+      }}
     >
       <canvas ref={canvasRef} className="size-full" />
-    </div>
+    </motion.div>
   );
 };
 
