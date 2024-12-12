@@ -7,13 +7,24 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import MotionParent from "./components/motion/motion-parent";
+import MotionItem from "./components/motion/motion-item";
+
+const container = {
+  initial: { opacity: 0, y: 5 },
+  animate: { opacity: 1, y: 0, transition: { delayChildren: 0.2 } },
+};
 
 export default function Page() {
   return (
-    <main className="container absolute inset-0 mx-auto mt-32 flex max-w-[625] flex-col gap-12">
-      <article className="flex flex-col gap-6">
+    <MotionParent
+      variants={container}
+      initial="initial"
+      animate="animate"
+      className="container absolute inset-0 mx-auto mt-32 flex max-w-[625] flex-col gap-12"
+    >
+      <MotionItem className="flex flex-col gap-6">
         <section className="flex justify-between">
           <div className="flex flex-col gap-1">
             <h1 className="text-2xl font-bold">jamie jacobs</h1>
@@ -40,9 +51,9 @@ export default function Page() {
             improve my skills!
           </p>
         </section>
-      </article>
+      </MotionItem>
       {/* <article className="prose dark:prose-invert"></article> */}
-      <article className="prose dark:prose-invert">
+      <MotionItem className="prose dark:prose-invert">
         <h2>projects</h2>
         <div className="flex gap-4 *:flex-1">
           <Card>
@@ -80,7 +91,7 @@ export default function Page() {
             </CardContent>
           </Card>
         </div>
-      </article>
-    </main>
+      </MotionItem>
+    </MotionParent>
   );
 }
