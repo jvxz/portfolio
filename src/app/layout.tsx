@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { Radio_Canada_Big } from "next/font/google";
 import Particles from "@/components/ui/particles";
 import MotionParent from "./components/motion/motion-parent";
-
+import { ViewTransitions } from "next-view-transitions";
 const radioCanadaBig = Radio_Canada_Big({
   subsets: ["latin"],
   display: "swap",
@@ -31,21 +31,23 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${radioCanadaBig.variable}`}>
-      <body className="h-screen antialiased">
-        <Particles />
-        <Providers>
-          <MotionParent
-            className="container absolute inset-0 mx-auto mt-32 flex max-w-[625] flex-col gap-12"
-            variants={container}
-            initial="hidden"
-            animate="show"
-          >
-            {/* <div className="flex items-center justify-between"></div> */}
-            {children}
-          </MotionParent>
-        </Providers>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" className={`${radioCanadaBig.variable}`}>
+        <body className="h-screen antialiased">
+          <Particles />
+          <Providers>
+            <MotionParent
+              className="container absolute inset-0 mx-auto mt-32 flex max-w-[625] flex-col gap-12"
+              variants={container}
+              initial="hidden"
+              animate="show"
+            >
+              {/* <div className="flex items-center justify-between"></div> */}
+              {children}
+            </MotionParent>
+          </Providers>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

@@ -8,6 +8,7 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
+import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 
 export default function Breadcrumbs() {
@@ -17,7 +18,11 @@ export default function Breadcrumbs() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">home</BreadcrumbLink>
+          <BreadcrumbLink asChild>
+            <Link replace href="/">
+              home
+            </Link>
+          </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
