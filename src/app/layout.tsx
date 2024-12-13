@@ -37,7 +37,7 @@ export default function RootLayout({
           <Particles />
           <Providers>
             <MotionParent
-              className="container absolute inset-0 mx-auto mt-32 flex max-w-[625] flex-col gap-12"
+              className="container absolute inset-0 mx-auto mt-32 flex max-w-[625px] flex-col gap-12"
               variants={container}
               initial="hidden"
               animate="show"
