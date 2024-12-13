@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 export default function IndexProjects({
   variants,
 }: {
@@ -28,11 +28,16 @@ export default function IndexProjects({
             <CardTitle>tagify</CardTitle>
             <CardDescription>online audio metadata editor</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="prose pt-4 dark:prose-invert">
             <p>
               tagify is a web app that makes it easy for you to edit the id3
               metadata tags in your audio files!
             </p>
+            <h3>stack:</h3>
+            <div className="flex flex-wrap items-center gap-2">
+              <RiNextjsFill className="size-8" />
+              <RiTailwindCssFill className="size-8" />
+            </div>
           </CardContent>
         </Card>
         <Card>
@@ -57,7 +62,7 @@ export default function IndexProjects({
             <div className="flex items-center gap-2"></div>
           </CardContent>
         </Card>
-      </div>
+      </div>{" "}
     </MotionItem>
   );
 }

@@ -38,12 +38,13 @@ export default function IndexProfile({
         <p>
           hello! i am an aspiring web developer based in north georgia. i enjoy
           using my time by coming up with new ideas or building ideas i have
-          written down.
+          written down. coding has been an aspiration of mine since i was in
+          high school, but i never took it seriously until 2024. i now work
+          every day to improve my skills!
         </p>
         <p>
-          coding has been an aspiration of mine since i was in high school, but
-          i never took it seriously until 2024. i now work every day to improve
-          my skills!
+          my main focus in my projects is full-stack, though i am most fluent in
+          frontend development.
         </p>
       </section>
     </MotionItem>
