@@ -3,22 +3,18 @@ import { Button } from "@/components/ui/button";
 import { Asterisk } from "lucide-react";
 import { Link } from "next-view-transitions";
 
-const item = {
-  hidden: {
-    opacity: 0,
-    y: 27.5,
-    transition: { duration: 0.45, type: "spring" },
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.45, type: "spring" },
-  },
-};
-
-export default function IndexProfile() {
+export default function IndexProfile({
+  variants,
+}: {
+  variants: {
+    hidden: {
+      opacity: number;
+      y: number;
+    };
+  };
+}) {
   return (
-    <MotionItem variants={item} className="flex flex-col gap-6">
+    <MotionItem variants={variants} className="flex flex-col gap-6">
       <section className="flex justify-between">
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-1">

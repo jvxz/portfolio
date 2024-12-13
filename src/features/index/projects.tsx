@@ -9,22 +9,18 @@ import {
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
-const item = {
-  hidden: {
-    opacity: 0,
-    y: 27.5,
-    transition: { duration: 0.45, type: "spring" },
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.45, type: "spring" },
-  },
-};
-
-export default function IndexProjects() {
+export default function IndexProjects({
+  variants,
+}: {
+  variants: {
+    hidden: {
+      opacity: number;
+      y: number;
+    };
+  };
+}) {
   return (
-    <MotionItem variants={item} className="prose dark:prose-invert">
+    <MotionItem variants={variants} className="prose dark:prose-invert">
       <h2>projects</h2>
       <div className="flex gap-4 *:flex-1">
         <Card>
