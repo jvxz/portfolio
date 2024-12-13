@@ -28,13 +28,13 @@ export default function IndexProfile({
           </h2>
         </div>
         <div className="flex gap-1">
-          <ThemeToggle />
+          <ThemeToggle className="size-[32px]" />
           <Button asChild variant="ghost">
             <Link href="/contact">contact</Link>
           </Button>
         </div>
       </section>
-      <section className="prose dark:prose-invert">
+      <section className="prose prose-neutral dark:prose-invert">
         <p>
           hello! i am an aspiring web developer based in north georgia. i enjoy
           using my time by coming up with new ideas or building ideas i have

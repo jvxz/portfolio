@@ -149,7 +149,7 @@ function ProjectCard({
   icon: React.ReactNode;
 }) {
   return (
-    <Card>
+    <Card className="transition-colors">
       <CardHeader>
         <Link
           className="w-fit no-underline underline-offset-4 hover:underline"
