@@ -1,6 +1,7 @@
 import IndexProfile from "@/features/index/profile";
 import IndexProjects from "@/features/index/projects";
 import MotionParent from "./components/motion/motion-parent";
+import ThemeToggle from "./components/theme-toggle";
 
 const container = {
   hidden: { opacity: 0 },
