@@ -1,4 +1,5 @@
 import MotionItem from "@/app/components/motion/motion-item";
+import ThemeToggle from "@/app/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { Asterisk } from "lucide-react";
 import { Link } from "next-view-transitions";
@@ -27,10 +28,9 @@ export default function IndexProfile({
           </h2>
         </div>
         <div className="flex gap-1">
+          <ThemeToggle />
           <Button asChild variant="ghost">
-            <Link replace href="/contact">
-              contact
-            </Link>
+            <Link href="/contact">contact</Link>
           </Button>
         </div>
       </section>
@@ -39,12 +39,13 @@ export default function IndexProfile({
           hello! i am an aspiring web developer based in north georgia. i enjoy
           using my time by coming up with new ideas or building ideas i have
           written down. coding has been an aspiration of mine since i was in
-          high school, but i never took it seriously until 2024. i now work
-          every day to improve my skills!
+          high school, but i never took it seriously until 2024.
         </p>
         <p>
-          my main focus in my projects is full-stack, though i am most fluent in
-          frontend development.
+          my main focus in my personal projects is full-stack, though i am most
+          fluent in frontend development. many things interest me in both
+          frontend and backend, so i strive every day to learn and improve my
+          skills!
         </p>
       </section>
     </MotionItem>

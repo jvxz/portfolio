@@ -19,9 +19,7 @@ export default function Breadcrumbs() {
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            <Link replace href="/">
-              home
-            </Link>
+            <Link href="/">home</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
