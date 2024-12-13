@@ -9,6 +9,8 @@ import {
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import Shadcn from "@/app/components/logos/shadcn";
+import Image from "next/image";
 export default function IndexProjects({
   variants,
 }: {
@@ -34,9 +36,22 @@ export default function IndexProjects({
               metadata tags in your audio files!
             </p>
             <h3>stack:</h3>
-            <div className="flex flex-wrap items-center gap-2">
-              <RiNextjsFill className="size-8" />
+            <div className="flex flex-wrap items-center gap-2 *:m-0">
+              {/* <RiNextjsFill className="size-8" />
               <RiTailwindCssFill className="size-8" />
+              <Shadcn className="size-8" /> */}
+              <Image
+                src="https://utfs.io/f/c7CSJBhCYkEGilDTOztlBuQTtx83gA4LMSK17ZvNRymhDYe9"
+                alt="react"
+                width={32}
+                height={32}
+              />
+              <Image
+                src="https://utfs.io/f/c7CSJBhCYkEGNm7urcPn8DARqxT3BoZa60FlQJfESCtMWbPY"
+                alt="next.js"
+                width={32}
+                height={32}
+              />
             </div>
           </CardContent>
         </Card>
