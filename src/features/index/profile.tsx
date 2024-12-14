@@ -27,11 +27,15 @@ export default function IndexProfile({
             <span className="text-sm text-muted-foreground">est. 2024</span>
           </h2>
         </div>
-        <div className="flex gap-1">
-          <ThemeToggle />
+        <div className="flex items-center gap-1">
+          <Button asChild variant="ghost">
+            <Link href="/gear">gear</Link>
+          </Button>
+          <p className="pointer-events-none text-sm text-muted-foreground">/</p>
           <Button asChild variant="ghost">
             <Link href="/contact">contact</Link>
           </Button>
+          <ThemeToggle className="size-[32px]" />
         </div>
       </section>
       <section className="prose dark:prose-invert">
