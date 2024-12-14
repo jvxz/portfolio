@@ -7,7 +7,11 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
+import {
+  ExternalLink,
+  FileAudioIcon,
+  TabletSmartphoneIcon,
+} from "lucide-react";
 import { Icon, type IconType } from "@/app/components/icons";
 import {
   Tooltip,
@@ -54,8 +58,7 @@ export default function IndexProjects({
           subtitle="online audio metadata editor"
           description="tagify is a web app that makes it easy for you to edit the id3 metadata tags in your audio files! supports most mainstream audio formats"
           href="https://tagify.twirl.sh"
-          // icon={<FileAudioIcon className="size-5" />}
-          icon="🎧"
+          icon={<FileAudioIcon className="size-5" />}
         />
         <ProjectCard
           stack={PINCH_STACK}
@@ -63,8 +66,7 @@ export default function IndexProjects({
           subtitle="online mobile wallpaper cropper"
           description="pinch is a simple web app that allows you to crop your mobile wallpapers to your desired size! supports most mainstream devices, including custom settings"
           href="https://pinch.twirl.sh"
-          // icon={<TabletSmartphoneIcon className="size-5" />}
-          icon="📱"
+          icon={<TabletSmartphoneIcon className="size-5" />}
         />
       </div>
     </MotionItem>
@@ -84,7 +86,7 @@ function ProjectCard({
   subtitle: string;
   description: string;
   href: string;
-  icon: string;
+  icon: React.ReactNode;
 }) {
   return (
     <Card>
@@ -95,7 +97,7 @@ function ProjectCard({
           href={href}
         >
           <CardTitle className="flex items-center gap-2">
-            {typeof icon === "string" ? <p className="m-0">{icon}</p> : icon}
+            {icon}
             {title}
             <ExternalLink className="size-5" />
           </CardTitle>
