@@ -12,6 +12,7 @@ export default function Overlay() {
         // opacity: 0.04,
         opacity: 0.027,
         pointerEvents: "none",
+        imageRendering: "pixelated",
       }}
     >
       {/* <div className="pointer-events-none fixed inset-0 z-20 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_35%,black)] dark:bg-black" /> */}

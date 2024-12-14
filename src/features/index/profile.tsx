@@ -49,7 +49,7 @@ export default function IndexProfile({
           my main focus in my personal projects is full-stack, though i am most
           fluent in frontend development. many things interest me in both
           frontend and backend, so i strive every day to learn and improve my
-          skills!
+          skills! 😇
         </p>
       </section>
     </MotionItem>

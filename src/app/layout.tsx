@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" className={`${radioCanadaBig.variable}`}>
-        <body className="h-screen antialiased">
+        <body className="mb-40 h-screen overflow-x-hidden antialiased">
           <Particles />
           <Overlay />
           <Providers>
