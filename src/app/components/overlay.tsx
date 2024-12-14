@@ -9,8 +9,8 @@ export default function Overlay() {
         top: 0,
         left: 0,
         background: `url(https://utfs.io/f/c7CSJBhCYkEGmGimM4dFqzIP0o1HLYDy5aBAxesVRMOZEXUQ)`,
-        opacity: 0.04,
-        // opacity: 0.027,
+        // opacity: 0.04,
+        opacity: 0.027,
         pointerEvents: "none",
       }}
     >
