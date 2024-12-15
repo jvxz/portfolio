@@ -1,6 +1,7 @@
 import IndexProfile from "@/features/index/profile";
 import IndexProjects from "@/features/index/projects";
 import MotionParent from "./components/motion/motion-parent";
+import IndexProficiencies from "@/features/index/proficiencies";
 
 const container = {
   hidden: { opacity: 0 },
@@ -42,6 +43,7 @@ export default function Page() {
       exit="exit"
     >
       <IndexProfile variants={item} />
+      <IndexProficiencies variants={item} />
       <IndexProjects variants={item} />
     </MotionParent>
   );

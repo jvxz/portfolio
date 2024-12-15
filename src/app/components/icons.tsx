@@ -1,85 +1,68 @@
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 
-const SIZE = 28;
+export type IconType =
+  | "html"
+  | "css"
+  | "nodejs"
+  | "git"
+  | "react"
+  | "tailwind"
+  | "nextjs"
+  | "shadcn"
+  | "reactQuery"
+  | "zustand"
+  | "zod"
+  | "javascript"
+  | "typescript"
+  | "postgresql"
+  | "drizzle";
+
+const DEFAULT_SIZE = 28;
+
+const ICON_URLS = {
+  html: "https://utfs.io/f/c7CSJBhCYkEGOkIH7UViwNIpmPqTZzUWREAYovBnSXDVFjs8",
+  git: "https://utfs.io/f/c7CSJBhCYkEGoKICuj6KEcZATuURhkiDFfltH7Y681OPrsmw",
+  css: "https://utfs.io/f/c7CSJBhCYkEGaZ9aLHmsr5MQYh7i94vnq2fSKkBwZsJypxLd",
+  nodejs: "https://utfs.io/f/c7CSJBhCYkEGzSo8rEdxhWRM39y40k1PqQgb8LF2sVXxHTGd",
+  react: "https://utfs.io/f/c7CSJBhCYkEGilDTOztlBuQTtx83gA4LMSK17ZvNRymhDYe9",
+  tailwind:
+    "https://utfs.io/f/c7CSJBhCYkEG1TFW7LzLlg7udZtwqpNcCIh53SeGfxBTYPJo",
+  nextjs: "https://utfs.io/f/c7CSJBhCYkEGU7KAbxJvEgZMY461nWCF2vN3BPRywSIXcLk7",
+  shadcn: "https://utfs.io/f/c7CSJBhCYkEG5Zd4hzTUxtMj6qgeNbn23vhZVR01YQaBpWfG",
+  reactQuery:
+    "https://utfs.io/f/c7CSJBhCYkEGRMjj5g4PSqhxg7nCsJoOXemVfG1Izb0twQMk",
+  zustand: "https://utfs.io/f/c7CSJBhCYkEGrJc7bCmjlFT4gO8etaXksB6S5fKA7Vb9UMwh",
+  zod: "https://utfs.io/f/c7CSJBhCYkEGsBYPVGucsBrR9LQbHGM0jU75SmEuCWzaYkA4",
+  javascript:
+    "https://utfs.io/f/c7CSJBhCYkEG9ip2x6YgGJKBbmMafNCDzUH5OjrTd6ePXQWc",
+  typescript:
+    "https://utfs.io/f/c7CSJBhCYkEGs3TW3aucsBrR9LQbHGM0jU75SmEuCWzaYkA4",
+  postgresql:
+    "https://utfs.io/f/c7CSJBhCYkEG71Of61KcUjmorl0geI8tnZBHNua7YzFsxMX4",
+  drizzle: "https://utfs.io/f/c7CSJBhCYkEG6Bq9IcXIKOv7gGWFoYuswVbRjHlANy9hUaT6",
+};
 
 function Icon({
-  src,
-  alt,
+  icon,
   className,
+  size = DEFAULT_SIZE,
+  ...props
 }: {
-  src: string;
-  alt: string;
+  icon: IconType;
   className?: string;
+  size?: number;
+  props?: ImageProps;
 }) {
   return (
     <Image
-      src={src}
-      alt={alt}
-      width={SIZE}
-      height={SIZE}
+      src={ICON_URLS[icon]}
+      alt={icon}
+      width={size}
+      height={size}
       className={"m-0 " + className}
+      {...props}
     />
   );
 }
 
-export function ReactIcon() {
-  return (
-    <Icon
-      src="https://utfs.io/f/c7CSJBhCYkEGilDTOztlBuQTtx83gA4LMSK17ZvNRymhDYe9"
-      alt="react"
-    />
-  );
-}
-
-export function TailwindIcon() {
-  return (
-    <Icon
-      src="https://utfs.io/f/c7CSJBhCYkEG1TFW7LzLlg7udZtwqpNcCIh53SeGfxBTYPJo"
-      alt="tailwind"
-    />
-  );
-}
-
-export function NextjsIcon() {
-  return (
-    <Icon
-      src="https://utfs.io/f/c7CSJBhCYkEGU7KAbxJvEgZMY461nWCF2vN3BPRywSIXcLk7"
-      alt="next.js"
-    />
-  );
-}
-
-export function ShadcnIcon() {
-  return (
-    <Icon
-      src="https://utfs.io/f/c7CSJBhCYkEG5Zd4hzTUxtMj6qgeNbn23vhZVR01YQaBpWfG"
-      alt="shadcn/ui"
-    />
-  );
-}
-
-export function ReactQueryIcon() {
-  return (
-    <Icon
-      src="https://utfs.io/f/c7CSJBhCYkEGRMjj5g4PSqhxg7nCsJoOXemVfG1Izb0twQMk"
-      alt="react query"
-    />
-  );
-}
-export function ZustandIcon() {
-  return (
-    <Icon
-      src="https://utfs.io/f/c7CSJBhCYkEGrJc7bCmjlFT4gO8etaXksB6S5fKA7Vb9UMwh"
-      alt="zustand"
-    />
-  );
-}
-
-export function ZodIcon() {
-  return (
-    <Icon
-      src="https://utfs.io/f/c7CSJBhCYkEGsBYPVGucsBrR9LQbHGM0jU75SmEuCWzaYkA4"
-      alt="zod"
-    />
-  );
-}
+export { Icon };

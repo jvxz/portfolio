@@ -12,15 +12,7 @@ import {
   FileAudioIcon,
   TabletSmartphoneIcon,
 } from "lucide-react";
-import {
-  NextjsIcon,
-  ReactIcon,
-  ReactQueryIcon,
-  ShadcnIcon,
-  TailwindIcon,
-  ZodIcon,
-  ZustandIcon,
-} from "@/app/components/icons";
+import { Icon, type IconType } from "@/app/components/icons";
 import {
   Tooltip,
   TooltipTrigger,
@@ -28,75 +20,23 @@ import {
 } from "@/components/ui/tooltip";
 
 const TAGIFY_STACK = [
-  {
-    name: "react",
-    href: "https://react.dev",
-    icon: ReactIcon,
-  },
-  {
-    name: "tailwind",
-    href: "https://tailwindcss.com",
-    icon: TailwindIcon,
-  },
-  {
-    name: "next.js",
-    href: "https://nextjs.org",
-    icon: NextjsIcon,
-  },
-  {
-    name: "tanstack query",
-    href: "https://tanstack.com/query/latest",
-    icon: ReactQueryIcon,
-  },
-  {
-    name: "zustand",
-    href: "https://zustand-demo.pmnd.rs/",
-    icon: ZustandIcon,
-  },
-  {
-    name: "shadcn/ui",
-    href: "https://ui.shadcn.com",
-    icon: ShadcnIcon,
-  },
-];
+  "react",
+  "tailwind",
+  "nextjs",
+  "reactQuery",
+  "zustand",
+  "shadcn",
+] as IconType[];
 
 const PINCH_STACK = [
-  {
-    name: "react",
-    href: "https://react.dev",
-    icon: ReactIcon,
-  },
-  {
-    name: "tailwind",
-    href: "https://tailwindcss.com",
-    icon: TailwindIcon,
-  },
-  {
-    name: "next.js",
-    href: "https://nextjs.org",
-    icon: NextjsIcon,
-  },
-  {
-    name: "tanstack query",
-    href: "https://tanstack.com/query/latest",
-    icon: ReactQueryIcon,
-  },
-  {
-    name: "shadcn/ui",
-    href: "https://ui.shadcn.com",
-    icon: ShadcnIcon,
-  },
-  {
-    name: "zustand",
-    href: "https://zustand-demo.pmnd.rs/",
-    icon: ZustandIcon,
-  },
-  {
-    name: "zod",
-    href: "https://zod.dev",
-    icon: ZodIcon,
-  },
-];
+  "react",
+  "tailwind",
+  "nextjs",
+  "reactQuery",
+  "zustand",
+  "shadcn",
+  "zod",
+] as IconType[];
 
 export default function IndexProjects({
   variants,
@@ -141,7 +81,7 @@ function ProjectCard({
   href,
   icon,
 }: {
-  stack: { name: string; href: string; icon: React.ElementType }[];
+  stack: IconType[];
   title: string;
   subtitle: string;
   description: string;
@@ -157,8 +97,8 @@ function ProjectCard({
           href={href}
         >
           <CardTitle className="flex items-center gap-2">
-            {icon}
             {title}
+            {icon}
             <ExternalLink className="size-5" />
           </CardTitle>
         </Link>
@@ -173,14 +113,14 @@ function ProjectCard({
           <div className="flex flex-wrap items-center gap-2 *:m-0 *:h-fit">
             {stack.map((e) => {
               return (
-                <Tooltip key={e.name} delayDuration={100}>
+                <Tooltip key={e} delayDuration={100}>
                   <TooltipTrigger>
-                    <Link href={e.href} target="_blank">
-                      <e.icon />
+                    <Link href={e} target="_blank">
+                      <Icon icon={e} size={28} />
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{e.name}</p>
+                    <p>{e}</p>
                   </TooltipContent>
                 </Tooltip>
               );

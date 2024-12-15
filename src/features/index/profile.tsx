@@ -27,11 +27,15 @@ export default function IndexProfile({
             <span className="text-sm text-muted-foreground">est. 2024</span>
           </h2>
         </div>
-        <div className="flex gap-1">
-          <ThemeToggle className="size-[32px]" />
+        <div className="flex items-center gap-1">
+          <Button asChild variant="ghost">
+            <Link href="/gear">gear</Link>
+          </Button>
+          <p className="pointer-events-none text-sm text-muted-foreground">/</p>
           <Button asChild variant="ghost">
             <Link href="/contact">contact</Link>
           </Button>
+          <ThemeToggle className="size-[32px]" />
         </div>
       </section>
       <section className="prose prose-neutral dark:prose-invert">
@@ -45,7 +49,7 @@ export default function IndexProfile({
           my main focus in my personal projects is full-stack, though i am most
           fluent in frontend development. many things interest me in both
           frontend and backend, so i strive every day to learn and improve my
-          skills!
+          skills! 😇
         </p>
       </section>
     </MotionItem>

@@ -69,7 +69,6 @@ const Particles: React.FC<ParticlesProps> = ({
   vx = 0,
   vy = 0,
 }) => {
-  const { theme } = useTheme();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
@@ -277,7 +276,10 @@ const Particles: React.FC<ParticlesProps> = ({
 
   return (
     <motion.div
-      className={cn("pointer-events-none", className)}
+      className={cn(
+        "pointer-events-none absolute inset-0 min-h-[100vh]",
+        className,
+      )}
       ref={canvasContainerRef}
       aria-hidden="true"
       initial={{ opacity: 0 }}
@@ -286,6 +288,7 @@ const Particles: React.FC<ParticlesProps> = ({
         duration: 2.5,
       }}
     >
+      {/* <canvas ref={canvasRef} className="min-h-[100vh]" /> */}
       <canvas ref={canvasRef} className="size-full" />
     </motion.div>
   );
