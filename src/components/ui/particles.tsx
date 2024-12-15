@@ -276,7 +276,10 @@ const Particles: React.FC<ParticlesProps> = ({
 
   return (
     <motion.div
-      className={cn("pointer-events-none min-h-[100vh]", className)}
+      className={cn(
+        "pointer-events-none absolute inset-0 min-h-[100vh]",
+        className,
+      )}
       ref={canvasContainerRef}
       aria-hidden="true"
       initial={{ opacity: 0 }}

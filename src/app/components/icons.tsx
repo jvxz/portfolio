@@ -1,7 +1,10 @@
 import Image, { type ImageProps } from "next/image";
 
 export type IconType =
+  | "html"
+  | "css"
   | "nodejs"
+  | "git"
   | "react"
   | "tailwind"
   | "nextjs"
@@ -10,11 +13,16 @@ export type IconType =
   | "zustand"
   | "zod"
   | "javascript"
-  | "typescript";
+  | "typescript"
+  | "postgresql"
+  | "drizzle";
 
 const DEFAULT_SIZE = 28;
 
 const ICON_URLS = {
+  html: "https://utfs.io/f/c7CSJBhCYkEGOkIH7UViwNIpmPqTZzUWREAYovBnSXDVFjs8",
+  git: "https://utfs.io/f/c7CSJBhCYkEGoKICuj6KEcZATuURhkiDFfltH7Y681OPrsmw",
+  css: "https://utfs.io/f/c7CSJBhCYkEGaZ9aLHmsr5MQYh7i94vnq2fSKkBwZsJypxLd",
   nodejs: "https://utfs.io/f/c7CSJBhCYkEGzSo8rEdxhWRM39y40k1PqQgb8LF2sVXxHTGd",
   react: "https://utfs.io/f/c7CSJBhCYkEGilDTOztlBuQTtx83gA4LMSK17ZvNRymhDYe9",
   tailwind:
@@ -29,6 +37,9 @@ const ICON_URLS = {
     "https://utfs.io/f/c7CSJBhCYkEG9ip2x6YgGJKBbmMafNCDzUH5OjrTd6ePXQWc",
   typescript:
     "https://utfs.io/f/c7CSJBhCYkEGs3TW3aucsBrR9LQbHGM0jU75SmEuCWzaYkA4",
+  postgresql:
+    "https://utfs.io/f/c7CSJBhCYkEG71Of61KcUjmorl0geI8tnZBHNua7YzFsxMX4",
+  drizzle: "https://utfs.io/f/c7CSJBhCYkEG6Bq9IcXIKOv7gGWFoYuswVbRjHlANy9hUaT6",
 };
 
 function Icon({

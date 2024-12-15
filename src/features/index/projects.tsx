@@ -97,8 +97,8 @@ function ProjectCard({
           href={href}
         >
           <CardTitle className="flex items-center gap-2">
-            {icon}
             {title}
+            {icon}
             <ExternalLink className="size-5" />
           </CardTitle>
         </Link>
