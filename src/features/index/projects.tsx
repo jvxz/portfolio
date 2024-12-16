@@ -18,6 +18,7 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "@/components/ui/tooltip";
+import { fadeStaggerChild } from "@/lib/def";
 
 const TAGIFY_STACK = [
   "react",
@@ -38,18 +39,9 @@ const PINCH_STACK = [
   "zod",
 ] as IconType[];
 
-export default function IndexProjects({
-  variants,
-}: {
-  variants: {
-    hidden: {
-      opacity: number;
-      y: number;
-    };
-  };
-}) {
+export default function IndexProjects() {
   return (
-    <MotionItem variants={variants} className="prose dark:prose-invert">
+    <MotionItem variants={fadeStaggerChild} className="prose dark:prose-invert">
       <h2>projects</h2>
       <div className="flex gap-4 *:flex-1">
         <ProjectCard

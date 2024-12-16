@@ -2,7 +2,7 @@ import IndexProfile from "@/features/index/profile";
 import IndexProjects from "@/features/index/projects";
 import MotionParent from "./components/motion/motion-parent";
 import IndexProficiencies from "@/features/index/proficiencies";
-import { fadeStaggerChild, fadeStaggerParent } from "@/lib/def";
+import { fadeStaggerParent } from "@/lib/def";
 
 export default function Page() {
   return (
@@ -13,9 +13,9 @@ export default function Page() {
       animate="show"
       exit="exit"
     >
-      <IndexProfile variants={fadeStaggerChild} />
-      <IndexProficiencies variants={fadeStaggerChild} />
-      <IndexProjects variants={fadeStaggerChild} />
+      <IndexProfile />
+      <IndexProficiencies />
+      <IndexProjects />
     </MotionParent>
   );
 }
