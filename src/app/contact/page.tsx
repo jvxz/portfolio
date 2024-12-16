@@ -4,6 +4,7 @@ import { Mail } from "lucide-react";
 import DiscordIcon from "../components/logos/discord";
 import ContactForm from "@/features/contact/form";
 import ThemeToggle from "../components/theme-toggle";
+import BlueskyIcon from "../components/logos/bluesky";
 
 export default function Page() {
   return (
@@ -23,6 +24,10 @@ export default function Page() {
           <Button className="self-start text-foreground" variant="link">
             <DiscordIcon className="text-foreground" />
             @nhhnh
+          </Button>
+          <Button className="self-start text-foreground" variant="link">
+            <BlueskyIcon className="text-foreground" />
+            @jamie.bio
           </Button>
         </div>
       </article>
