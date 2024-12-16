@@ -27,7 +27,7 @@ export default function Footer() {
           )
         </span>
       </div>
-      <p className="">do not steal</p>
+      <p className="">do not steal.</p>
     </footer>
   ) : isLoading ? (
     <footer className="container mx-auto flex max-w-[625px] flex-col items-center py-16 text-sm text-muted-foreground"></footer>

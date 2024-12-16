@@ -1,21 +1,13 @@
 import MotionItem from "@/app/components/motion/motion-item";
 import ThemeToggle from "@/app/components/theme-toggle";
 import { Button } from "@/components/ui/button";
+import { fadeStaggerChild } from "@/lib/def";
 import { Asterisk } from "lucide-react";
 import { Link } from "next-view-transitions";
 
-export default function IndexProfile({
-  variants,
-}: {
-  variants: {
-    hidden: {
-      opacity: number;
-      y: number;
-    };
-  };
-}) {
+export default function IndexProfile() {
   return (
-    <MotionItem variants={variants} className="flex flex-col gap-6">
+    <MotionItem variants={fadeStaggerChild} className="flex flex-col gap-6">
       <section className="flex justify-between">
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-1">

@@ -7,6 +7,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import MotionParent from "@/app/components/motion/motion-parent";
+import { fadeStaggerChild, fadeStaggerParent } from "@/lib/def";
 
 const PROFICIENCIES = [
   "html",
@@ -22,36 +24,52 @@ const PROFICIENCIES = [
   "drizzle",
 ] as IconType[];
 
-export default function IndexProficiencies({
-  variants,
-}: {
-  variants: {
-    hidden: {
-      opacity: number;
-      y: number;
-    };
-  };
-}) {
+export default function IndexProficiencies() {
   return (
     <MotionItem
-      variants={variants}
+      variants={fadeStaggerChild}
       className="prose prose-neutral dark:prose-invert"
     >
       <h2>proficiencies</h2>
-      <div className="flex items-center gap-3">
+      <MotionParent
+        variants={{
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+
+            transition: {
+              delay: 0.1,
+
+              staggerChildren: 0.075,
+            },
+          },
+          exit: {
+            opacity: 0,
+            transition: {
+              staggerChildren: 0.1,
+            },
+          },
+        }}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+        className="flex items-center gap-3"
+      >
         {PROFICIENCIES.map((e) => (
-          <TooltipProvider delayDuration={100} key={e}>
-            <Tooltip>
-              <TooltipTrigger className="cursor-default">
-                <Icon className="pointer-events-none" icon={e} size={42} />
-              </TooltipTrigger>
-              <TooltipContent>
-                {e === "nodejs" ? "node.js" : e === "nextjs" ? "next.js" : e}
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <MotionItem variants={fadeStaggerChild} key={e}>
+            <TooltipProvider delayDuration={100}>
+              <Tooltip>
+                <TooltipTrigger className="cursor-default">
+                  <Icon className="pointer-events-none" icon={e} size={42} />
+                </TooltipTrigger>
+                <TooltipContent>
+                  {e === "nodejs" ? "node.js" : e === "nextjs" ? "next.js" : e}
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </MotionItem>
         ))}
-      </div>
+      </MotionParent>
     </MotionItem>
   );
 }
