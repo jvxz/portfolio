@@ -61,6 +61,7 @@ export default function IndexProjects() {
           icon={<TabletSmartphoneIcon className="size-5" />}
         />
       </div>
+      <p>i am always thinking/looking for new projects to work on!</p>
     </MotionItem>
   );
 }

@@ -5,6 +5,8 @@ import DiscordIcon from "../components/logos/discord";
 import ContactForm from "@/features/contact/form";
 import ThemeToggle from "../components/theme-toggle";
 import BlueskyIcon from "../components/logos/bluesky";
+import GithubIcon from "../components/logos/github";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -13,22 +15,38 @@ export default function Page() {
         <Breadcrumbs />
         <ThemeToggle />
       </div>
-      <article className="prose prose-neutral dark:prose-invert">
+      <article className="prose prose-neutral dark:prose-invert prose-a:text-foreground">
         <h2>let&apos;s talk!</h2>
         <p>questions? comments? criticism? let me know!</p>
         <div className="flex flex-col">
-          <Button variant="link" className="self-start text-foreground">
+          <Button
+            variant="link"
+            className="self-start text-foreground no-underline"
+          >
             <Mail className="text-foreground" />
             biz@jamie.bio
           </Button>
-          <Button className="self-start text-foreground" variant="link">
-            <DiscordIcon className="text-foreground" />
-            @nhhnh
+          <Button
+            asChild
+            className="self-start text-foreground no-underline"
+            variant="link"
+          >
+            <Link
+              href="https://github.com/jvxz"
+              target="_blank"
+              className="no-underline"
+            >
+              <GithubIcon className="text-foreground" />
+              @jvxz
+            </Link>
           </Button>
-          <Button className="self-start text-foreground" variant="link">
+          {/* <Button
+            className="self-start text-foreground no-underline"
+            variant="link"
+          >
             <BlueskyIcon className="text-foreground" />
             @jamie.bio
-          </Button>
+          </Button> */}
         </div>
       </article>
       <ContactForm />

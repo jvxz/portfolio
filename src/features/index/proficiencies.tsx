@@ -8,7 +8,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import MotionParent from "@/app/components/motion/motion-parent";
-import { fadeStaggerChild, fadeStaggerParent } from "@/lib/def";
+import { fadeStaggerChild } from "@/lib/def";
 
 const PROFICIENCIES = [
   "html",
@@ -16,11 +16,11 @@ const PROFICIENCIES = [
   "javascript",
   "typescript",
   "git",
-  "nodejs",
+  // "nodejs",
   "react",
   "nextjs",
   "tailwind",
-  "postgresql",
+  // "postgresql",
   "drizzle",
 ] as IconType[];
 
