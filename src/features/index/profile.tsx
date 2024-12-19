@@ -20,13 +20,13 @@ export default function IndexProfile() {
           </h2>
         </div>
         <div className="flex items-center gap-1">
-          <Button asChild variant="ghost">
+          {/* <Button asChild variant="ghost">
             <Link href="/gear">gear</Link>
           </Button>
           <p className="pointer-events-none text-sm text-muted-foreground">/</p>
           <Button asChild variant="ghost">
             <Link href="/contact">contact</Link>
-          </Button>
+          </Button> */}
           <ThemeToggle className="size-[32px]" />
         </div>
       </section>

@@ -49,7 +49,7 @@ export default function IndexProjects() {
           title="tagify"
           subtitle="online audio metadata editor"
           description="tagify is a web app that makes it easy for you to edit the id3 metadata tags in your audio files! supports most mainstream audio formats"
-          href="https://tagify.twirl.sh"
+          href="https://tagify.wisp.bio"
           icon={<FileAudioIcon className="size-5" />}
         />
         <ProjectCard
@@ -57,11 +57,11 @@ export default function IndexProjects() {
           title="pinch"
           subtitle="online mobile wallpaper cropper"
           description="pinch is a simple web app that allows you to crop your mobile wallpapers to your desired size! supports most mainstream devices, including custom settings"
-          href="https://pinch.twirl.sh"
+          href="https://pinch.wisp.bio"
           icon={<TabletSmartphoneIcon className="size-5" />}
         />
       </div>
-      <p>i am always thinking/looking for new projects to work on!</p>
+      {/* <p>i am always thinking/looking for new projects to work on!</p> */}
     </MotionItem>
   );
 }
