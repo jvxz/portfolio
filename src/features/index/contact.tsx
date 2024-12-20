@@ -13,9 +13,12 @@ export default function IndexContact() {
         <Button
           variant="link"
           className="self-start text-foreground no-underline"
+          asChild
         >
-          <Mail className="text-foreground" />
-          jamie@wisp.bio
+          <Link href="mailto:jamie@wisp.bio">
+            <Mail className="text-foreground" />
+            jamie@wisp.bio
+          </Link>
         </Button>
         <Button
           asChild
