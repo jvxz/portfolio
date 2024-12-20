@@ -26,7 +26,7 @@ export default function IndexProfile() {
             <span className="text-sm text-muted-foreground">est. 2024</span>
           </h2>
           <div className="flex items-center gap-2">
-            {["he/any", "en-us", "utc-5"].map((e) => (
+            {["20 years old", "he/any", "en-us", "utc-5"].map((e) => (
               <Badge variant="outline" key={e}>
                 {e}
               </Badge>
