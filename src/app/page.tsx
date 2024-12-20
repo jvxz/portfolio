@@ -3,6 +3,7 @@ import IndexProjects from "@/features/index/projects";
 import MotionParent from "./components/motion/motion-parent";
 import IndexProficiencies from "@/features/index/proficiencies";
 import { fadeStaggerParent } from "@/lib/def";
+import IndexContact from "@/features/index/contact";
 
 export default function Page() {
   return (
@@ -16,6 +17,7 @@ export default function Page() {
       <IndexProfile />
       <IndexProficiencies />
       <IndexProjects />
+      <IndexContact />
     </MotionParent>
   );
 }
