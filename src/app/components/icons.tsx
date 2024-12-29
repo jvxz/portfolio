@@ -15,7 +15,8 @@ export type IconType =
   | "javascript"
   | "typescript"
   | "postgresql"
-  | "drizzle";
+  | "drizzle"
+  | "betterAuth";
 
 const DEFAULT_SIZE = 28;
 
@@ -40,6 +41,8 @@ const ICON_URLS = {
   postgresql:
     "https://utfs.io/f/c7CSJBhCYkEG71Of61KcUjmorl0geI8tnZBHNua7YzFsxMX4",
   drizzle: "https://utfs.io/f/c7CSJBhCYkEG6Bq9IcXIKOv7gGWFoYuswVbRjHlANy9hUaT6",
+  betterAuth:
+    "https://utfs.io/f/c7CSJBhCYkEGtfC4RHDcQFYk6hC31I2VxeA8g7MnSpRoLZs0",
 };
 
 function Icon({

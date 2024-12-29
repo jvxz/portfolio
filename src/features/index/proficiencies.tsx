@@ -8,7 +8,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import MotionParent from "@/app/components/motion/motion-parent";
-import { fadeStaggerChild } from "@/lib/def";
+import { fadeStaggerChild } from "@/lib/constants";
 
 const PROFICIENCIES = [
   "html",

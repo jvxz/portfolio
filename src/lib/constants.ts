@@ -1,3 +1,5 @@
+import { type IconType } from "@/app/components/icons";
+
 export const fadeStaggerParent = {
     hidden: { opacity: 0 },
     show: {
@@ -26,3 +28,35 @@ export const fadeStaggerChild = {
         transition: { duration: 0.45, type: "spring" },
     },
 };
+
+export const TAGIFY_STACK = [
+    "react",
+    "tailwind",
+    "nextjs",
+    "reactQuery",
+    "zustand",
+    "shadcn",
+] as IconType[];
+
+export const PINCH_STACK = [
+    "react",
+    "tailwind",
+    "nextjs",
+    "reactQuery",
+    "zustand",
+    "shadcn",
+    "zod",
+] as IconType[];
+
+export const GLOSS_STACK = [
+    "react",
+    "tailwind",
+    "nextjs",
+    "postgresql",
+    "zustand",
+    "shadcn",
+    "drizzle",
+    "betterAuth",
+    "zod"
+] as IconType[];
+

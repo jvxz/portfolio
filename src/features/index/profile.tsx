@@ -3,7 +3,7 @@ import ThemeToggle from "@/app/components/theme-toggle";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { fadeStaggerChild } from "@/lib/def";
+import { fadeStaggerChild } from "@/lib/constants";
 import { Asterisk } from "lucide-react";
 import { Link } from "next-view-transitions";
 
