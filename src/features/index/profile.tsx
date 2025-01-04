@@ -1,5 +1,5 @@
-import MotionItem from "@/app/components/motion/motion-item";
-import ThemeToggle from "@/app/components/theme-toggle";
+import MotionItem from "@/components/motion/motion-item";
+import ThemeToggle from "@/components/theme-toggle";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

@@ -1,11 +1,11 @@
 import "@/styles/globals.css";
-import Providers from "./components/providers";
+import Providers from "@/components/providers";
 import { type Metadata } from "next";
 import { Radio_Canada_Big } from "next/font/google";
 import Particles from "@/components/ui/particles";
 import { ViewTransitions } from "next-view-transitions";
-import Overlay from "./components/overlay";
-import Footer from "./components/footer";
+import Overlay from "@/components/overlay";
+import Footer from "@/components/footer";
 
 const radioCanadaBig = Radio_Canada_Big({
   subsets: ["latin"],

@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import Breadcrumbs from "../components/breadcrumbs";
+import Breadcrumbs from "@/components/breadcrumbs";
 import { Mail } from "lucide-react";
 import ContactForm from "@/features/contact/form";
-import ThemeToggle from "../components/theme-toggle";
-import GithubIcon from "../components/logos/github";
+import ThemeToggle from "@/components/theme-toggle";
+import GithubIcon from "@/components/logos/github";
 import Link from "next/link";
 
 export default function Page() {

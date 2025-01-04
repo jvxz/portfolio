@@ -1,8 +1,8 @@
-import MotionItem from "@/app/components/motion/motion-item";
+import MotionItem from "@/components/motion/motion-item";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { Link } from "next-view-transitions";
-import GithubIcon from "@/app/components/logos/github";
+import GithubIcon from "@/components/logos/github";
 
 export default function IndexContact() {
   return (

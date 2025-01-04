@@ -1,13 +1,13 @@
-import MotionItem from "@/app/components/motion/motion-item";
-import { Icon } from "@/app/components/icons";
-import { type IconType } from "@/app/components/icons";
+import MotionItem from "@/components/motion/motion-item";
+import { Icon } from "@/components/icons";
+import { type IconType } from "@/components/icons";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import MotionParent from "@/app/components/motion/motion-parent";
+import MotionParent from "@/components/motion/motion-parent";
 import { fadeStaggerChild } from "@/lib/constants";
 
 const PROFICIENCIES = [

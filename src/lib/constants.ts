@@ -1,4 +1,4 @@
-import { type IconType } from "@/app/components/icons";
+import { type IconType } from "@/components/icons";
 
 export const fadeStaggerParent = {
     hidden: { opacity: 0 },

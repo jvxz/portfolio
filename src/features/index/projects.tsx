@@ -1,4 +1,4 @@
-import MotionItem from "@/app/components/motion/motion-item";
+import MotionItem from "@/components/motion/motion-item";
 import {
   Card,
   CardHeader,
@@ -13,7 +13,7 @@ import {
   Paintbrush,
   TabletSmartphoneIcon,
 } from "lucide-react";
-import { Icon, type IconType } from "@/app/components/icons";
+import { Icon, type IconType } from "@/components/icons";
 import {
   Tooltip,
   TooltipTrigger,
@@ -26,9 +26,9 @@ import {
   PINCH_STACK,
   TAGIFY_STACK,
 } from "@/lib/constants";
-import MotionParent from "@/app/components/motion/motion-parent";
+import MotionParent from "@/components/motion/motion-parent";
 import { Button } from "@/components/ui/button";
-import GithubIcon from "@/app/components/logos/github";
+import GithubIcon from "@/components/logos/github";
 
 export default function IndexProjects() {
   return (
