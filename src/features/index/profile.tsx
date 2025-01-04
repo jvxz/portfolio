@@ -2,10 +2,7 @@ import MotionItem from "@/components/motion/motion-item";
 import ThemeToggle from "@/components/theme-toggle";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { fadeStaggerChild } from "@/lib/constants";
-import { Asterisk } from "lucide-react";
-import { Link } from "next-view-transitions";
 
 export default function IndexProfile() {
   return (
@@ -18,11 +15,9 @@ export default function IndexProfile() {
               <AvatarFallback>jj</AvatarFallback>
             </Avatar>
             <h1 className="text-2xl font-bold">jamie jacobs</h1>
-            {/* <Asterisk className="motion-preset-pop size-8" /> */}
-            {/* <p>•ᴗ•</p> */}
           </div>
           <h2 className="text-lg">
-            professional react web developer{" "}
+            frontend web developer{" "}
             <span className="text-sm text-muted-foreground">est. 2024</span>
           </h2>
           <div className="flex items-center gap-2">
@@ -33,16 +28,7 @@ export default function IndexProfile() {
             ))}
           </div>
         </div>
-        <div className="flex items-center gap-1">
-          {/* <Button asChild variant="ghost">
-            <Link href="/gear">gear</Link>
-          </Button>
-          <p className="pointer-events-none text-sm text-muted-foreground">/</p>
-          <Button asChild variant="ghost">
-            <Link href="/contact">contact</Link>
-          </Button> */}
-          <ThemeToggle className="size-[32px]" />
-        </div>
+        <ThemeToggle className="size-[32px]" />
       </section>
       <section className="prose prose-neutral dark:prose-invert">
         <p>
