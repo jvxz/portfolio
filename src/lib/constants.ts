@@ -140,12 +140,12 @@ export const GLOSS_STACK: Stack[] = [
     {
         icon: Icons.Drizzle,
         name: "Drizzle",
-        url: "https://drizzle.dev"
+        url: "https://orm.drizzle.team"
     },
     {
         icon: Icons.BetterAuth,
         name: "better-auth",
-        url: "https://betterauth.dev"
+        url: "https://www.better-auth.com"
     }
 ]
 
