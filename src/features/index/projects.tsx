@@ -75,7 +75,6 @@ export default function IndexProjects() {
           />
         </MotionItem>
       </MotionParent>
-      {/* <p>i am always thinking/looking for new projects to work on!</p> */}
     </MotionItem>
   );
 }
