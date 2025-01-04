@@ -1,6 +1,4 @@
 import MotionItem from "@/components/motion/motion-item";
-import { Icon } from "@/components/icons";
-import { type IconType } from "@/components/icons";
 import {
   Tooltip,
   TooltipContent,
@@ -9,20 +7,20 @@ import {
 } from "@/components/ui/tooltip";
 import MotionParent from "@/components/motion/motion-parent";
 import { fadeStaggerChild } from "@/lib/constants";
+import { Icons } from "@/components/ui/icons";
 
 const PROFICIENCIES = [
-  "html",
-  "css",
-  "javascript",
-  "typescript",
-  "git",
-  // "nodejs",
-  "react",
-  "nextjs",
-  "tailwind",
-  // "postgresql",
-  "drizzle",
-] as IconType[];
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "Git",
+  "React",
+  "NextJS",
+  "SASS",
+  "Tailwind",
+  "Drizzle",
+];
 
 export default function IndexProficiencies() {
   return (
@@ -60,10 +58,12 @@ export default function IndexProficiencies() {
             <TooltipProvider delayDuration={100}>
               <Tooltip>
                 <TooltipTrigger className="cursor-default">
-                  <Icon className="pointer-events-none" icon={e} size={42} />
+                  {Icons[e as keyof typeof Icons]({
+                    className: "size-10",
+                  })}
                 </TooltipTrigger>
                 <TooltipContent>
-                  {e === "nodejs" ? "node.js" : e === "nextjs" ? "next.js" : e}
+                  {e === "NextJS" ? "Next.js" : e}
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>

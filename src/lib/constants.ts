@@ -1,4 +1,4 @@
-import { type IconType } from "@/components/icons";
+import { Icons } from "@/components/ui/icons";
 
 export const fadeStaggerParent = {
     hidden: { opacity: 0 },
@@ -29,34 +29,123 @@ export const fadeStaggerChild = {
     },
 };
 
-export const TAGIFY_STACK = [
-    "react",
-    "tailwind",
-    "nextjs",
-    "reactQuery",
-    "zustand",
-    "shadcn",
-] as IconType[];
+type Stack = {
+    icon: typeof Icons[keyof typeof Icons];
+    name: string;
+    url: string;
+}
 
-export const PINCH_STACK = [
-    "react",
-    "tailwind",
-    "nextjs",
-    "reactQuery",
-    "zustand",
-    "shadcn",
-    "zod",
-] as IconType[];
+export const TAGIFY_STACK: Stack[] = [
+    {
+        icon: Icons.React,
+        name: "React",
+        url: "https://react.dev"
+    },
+    {
+        icon: Icons.Tailwind,
+        name: "Tailwind CSS",
+        url: "https://tailwindcss.com"
+    },
+    {
+        icon: Icons.NextJS,
+        name: "Next.js",
+        url: "https://nextjs.org"
+    },
+    {
+        icon: Icons.ReactQuery,
+        name: "React Query",
+        url: "https://tanstack.com/query"
+    },
+    {
+        icon: Icons.Zustand,
+        name: "Zustand",
+        url: "https://zustand-demo.pmnd.rs"
+    },
+    {
+        icon: Icons.ShadcnUI,
+        name: "shadcn/ui",
+        url: "https://ui.shadcn.com"
+    },
+]
 
-export const GLOSS_STACK = [
-    "react",
-    "tailwind",
-    "nextjs",
-    "postgresql",
-    "zustand",
-    "shadcn",
-    "drizzle",
-    "betterAuth",
-    "zod"
-] as IconType[];
+export const PINCH_STACK: Stack[] = [
+    {
+        icon: Icons.React,
+        name: "React",
+        url: "https://react.dev"
+    },
+    {
+        icon: Icons.Tailwind,
+        name: "Tailwind CSS",
+        url: "https://tailwindcss.com"
+    },
+    {
+        icon: Icons.NextJS,
+        name: "Next.js",
+        url: "https://nextjs.org"
+    },
+    {
+        icon: Icons.ReactQuery,
+        name: "React Query",
+        url: "https://tanstack.com/query"
+    },
+    {
+        icon: Icons.Zustand,
+        name: "Zustand",
+        url: "https://zustand-demo.pmnd.rs"
+    },
+    {
+        icon: Icons.ShadcnUI,
+        name: "shadcn/ui",
+        url: "https://ui.shadcn.com"
+    },
+    {
+        icon: Icons.Zod,
+        name: "Zod",
+        url: "https://zod.dev"
+    }
+]
+
+export const GLOSS_STACK: Stack[] = [
+    {
+        icon: Icons.React,
+        name: "React",
+        url: "https://react.dev"
+    },
+    {
+        icon: Icons.Tailwind,
+        name: "Tailwind CSS",
+        url: "https://tailwindcss.com"
+    },
+    {
+        icon: Icons.NextJS,
+        name: "Next.js",
+        url: "https://nextjs.org"
+    },
+    {
+        icon: Icons.PostgreSQL,
+        name: "PostgreSQL",
+        url: "https://www.postgresql.org"
+    },
+    {
+        icon: Icons.Zustand,
+        name: "Zustand",
+        url: "https://zustand.dev"
+    },
+    {
+        icon: Icons.ShadcnUI,
+        name: "shadcn/ui",
+        url: "https://ui.shadcn.com"
+    },
+    {
+        icon: Icons.Drizzle,
+        name: "Drizzle",
+        url: "https://drizzle.dev"
+    },
+    {
+        icon: Icons.BetterAuth,
+        name: "better-auth",
+        url: "https://betterauth.dev"
+    }
+]
 

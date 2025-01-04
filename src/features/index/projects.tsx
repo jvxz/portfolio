@@ -13,7 +13,6 @@ import {
   Paintbrush,
   TabletSmartphoneIcon,
 } from "lucide-react";
-import { Icon, type IconType } from "@/components/icons";
 import {
   Tooltip,
   TooltipTrigger,
@@ -29,6 +28,7 @@ import {
 import MotionParent from "@/components/motion/motion-parent";
 import { Button } from "@/components/ui/button";
 import GithubIcon from "@/components/logos/github";
+import { type Icons } from "@/components/ui/icons";
 
 export default function IndexProjects() {
   return (
@@ -88,7 +88,11 @@ function ProjectCard({
   icon,
   sourceCode,
 }: {
-  stack: IconType[];
+  stack: {
+    name: string;
+    icon: (typeof Icons)[keyof typeof Icons];
+    url: string;
+  }[];
   title: string;
   subtitle: string;
   description: string;
@@ -122,14 +126,17 @@ function ProjectCard({
             <div className="flex flex-wrap items-center gap-2 *:m-0 *:h-fit">
               {stack.map((e) => {
                 return (
-                  <Tooltip key={e} delayDuration={100}>
+                  <Tooltip key={e.name} delayDuration={100}>
                     <TooltipTrigger>
-                      <Link href={e} target="_blank">
-                        <Icon icon={e} size={28} />
+                      <Link href={e.url} target="_blank">
+                        {e.icon({
+                          className: "size-8",
+                          style: { textShadow: "0 0 10px #000" },
+                        })}
                       </Link>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>{e}</p>
+                      <p>{e.name}</p>
                     </TooltipContent>
                   </Tooltip>
                 );
