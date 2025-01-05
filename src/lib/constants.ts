@@ -1,4 +1,5 @@
 import { Icons } from "@/components/ui/icons";
+import { FileAudioIcon, Paintbrush, TabletSmartphoneIcon } from "lucide-react";
 
 export const fadeStaggerParent = {
     hidden: { opacity: 0 },
@@ -35,7 +36,7 @@ type Stack = {
     url: string;
 }
 
-export const TAGIFY_STACK: Stack[] = [
+const TAGIFY_STACK: Stack[] = [
     {
         icon: Icons.React,
         name: "React",
@@ -68,7 +69,7 @@ export const TAGIFY_STACK: Stack[] = [
     },
 ]
 
-export const PINCH_STACK: Stack[] = [
+const PINCH_STACK: Stack[] = [
     {
         icon: Icons.React,
         name: "React",
@@ -106,7 +107,7 @@ export const PINCH_STACK: Stack[] = [
     }
 ]
 
-export const GLOSS_STACK: Stack[] = [
+const GLOSS_STACK: Stack[] = [
     {
         icon: Icons.React,
         name: "React",
@@ -148,4 +149,39 @@ export const GLOSS_STACK: Stack[] = [
         url: "https://www.better-auth.com"
     }
 ]
+
+
+export const projects = [
+    {
+        title: "gloss",
+        subtitle: "shadcn/ui theme generator",
+        description:
+            "gloss is an accessible theme generator for the shadcn/ui library. pick your hue and choose from a variety of styles to generate a theme for your project!",
+        href: "https://gloss.wisp.bio",
+        icon: Paintbrush,
+        sourceCode: "https://github.com/jvxz/gloss",
+        stack: GLOSS_STACK,
+    },
+    {
+        title: "tagify",
+        subtitle: "online audio metadata editor",
+        description:
+            "tagify is a web app that makes it easy for you to edit the id3 metadata tags in your audio files! supports most mainstream audio formats",
+        href: "https://tagify.wisp.bio",
+        icon: FileAudioIcon,
+        sourceCode: "https://github.com/jvxz/tagify",
+        stack: TAGIFY_STACK,
+    },
+    {
+        title: "pinch",
+        subtitle: "online mobile wallpaper cropper",
+        description:
+            "pinch is a simple web app that allows you to crop your mobile wallpapers to your desired size! supports most mainstream devices, including custom settings",
+        href: "https://pinch.wisp.bio",
+        icon: TabletSmartphoneIcon,
+        sourceCode: "https://github.com/jvxz/pinch",
+        stack: PINCH_STACK,
+    },
+];
+
 

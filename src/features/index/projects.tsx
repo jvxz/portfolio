@@ -7,24 +7,13 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import Link from "next/link";
-import {
-  ExternalLink,
-  FileAudioIcon,
-  Paintbrush,
-  TabletSmartphoneIcon,
-} from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
 } from "@/components/ui/tooltip";
-import {
-  fadeStaggerChild,
-  fadeStaggerParent,
-  GLOSS_STACK,
-  PINCH_STACK,
-  TAGIFY_STACK,
-} from "@/lib/constants";
+import { fadeStaggerChild, fadeStaggerParent, projects } from "@/lib/constants";
 import MotionParent from "@/components/motion/motion-parent";
 import { Button } from "@/components/ui/button";
 import GithubIcon from "@/components/logos/github";
@@ -41,39 +30,11 @@ export default function IndexProjects() {
         animate="show"
         exit="exit"
       >
-        <MotionItem variants={fadeStaggerChild}>
-          <ProjectCard
-            stack={GLOSS_STACK}
-            title="gloss"
-            subtitle="shadcn/ui theme generator"
-            description="gloss is an accessible theme generator for the shadcn/ui library. pick your hue and choose from a variety of styles to generate a theme for your project!"
-            href="https://gloss.wisp.bio"
-            icon={<Paintbrush className="size-5" />}
-            sourceCode="https://github.com/jvxz/gloss"
-          />
-        </MotionItem>
-        <MotionItem variants={fadeStaggerChild}>
-          <ProjectCard
-            stack={TAGIFY_STACK}
-            title="tagify"
-            subtitle="online audio metadata editor"
-            description="tagify is a web app that makes it easy for you to edit the id3 metadata tags in your audio files! supports most mainstream audio formats"
-            href="https://tagify.wisp.bio"
-            icon={<FileAudioIcon className="size-5" />}
-            sourceCode="https://github.com/jvxz/tagify"
-          />
-        </MotionItem>
-        <MotionItem variants={fadeStaggerChild}>
-          <ProjectCard
-            stack={PINCH_STACK}
-            title="pinch"
-            subtitle="online mobile wallpaper cropper"
-            description="pinch is a simple web app that allows you to crop your mobile wallpapers to your desired size! supports most mainstream devices, including custom settings"
-            href="https://pinch.wisp.bio"
-            icon={<TabletSmartphoneIcon className="size-5" />}
-            sourceCode="https://github.com/jvxz/pinch"
-          />
-        </MotionItem>
+        {projects.map((project) => (
+          <MotionItem variants={fadeStaggerChild} key={project.title}>
+            <ProjectCard {...project} />
+          </MotionItem>
+        ))}
       </MotionParent>
     </MotionItem>
   );
@@ -85,7 +46,7 @@ function ProjectCard({
   subtitle,
   description,
   href,
-  icon,
+  icon: Icon,
   sourceCode,
 }: {
   stack: {
@@ -97,7 +58,7 @@ function ProjectCard({
   subtitle: string;
   description: string;
   href: string;
-  icon: React.ReactNode;
+  icon: React.ElementType;
   sourceCode: string;
 }) {
   return (
@@ -110,7 +71,7 @@ function ProjectCard({
         >
           <CardTitle className="flex items-center gap-2">
             {title}
-            {icon}
+            <Icon className="size-5" />
             <ExternalLink className="size-5" />
           </CardTitle>
         </Link>
