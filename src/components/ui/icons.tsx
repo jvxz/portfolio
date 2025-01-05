@@ -1574,7 +1574,7 @@ const Icons = {
       />
     </svg>
   ),
-  SASS: ({
+  Sass: ({
     width = 16,
     height = 16,
     size = 16,

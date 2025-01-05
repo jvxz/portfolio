@@ -17,7 +17,7 @@ const PROFICIENCIES = [
   "Git",
   "React",
   "NextJS",
-  "SASS",
+  "Sass",
   "Tailwind",
   "Drizzle",
 ];
