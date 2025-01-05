@@ -104,7 +104,12 @@ function ProjectCard({
               })}
             </div>
           </div>
-          <Button asChild className="mr-8" variant="link" size="icon">
+          <Button
+            asChild
+            className="mr-8 hidden md:flex"
+            variant="link"
+            size="icon"
+          >
             <Link href={sourceCode} target="_blank">
               <GithubIcon className="size-5" />
               source code

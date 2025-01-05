@@ -51,7 +51,7 @@ export default function IndexProficiencies() {
         initial="hidden"
         animate="show"
         exit="exit"
-        className="flex items-center gap-3"
+        className="flex flex-wrap items-center gap-3"
       >
         {PROFICIENCIES.map((e) => (
           <MotionItem variants={fadeStaggerChild} key={e}>

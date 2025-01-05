@@ -31,7 +31,7 @@ export default function IndexProfile() {
             ))}
           </div>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-start gap-1 sm:items-center">
           <Button size="icon" variant="ghost">
             <Link href="https://github.com/jvxz/portfolio">
               <Icons.GitHub />

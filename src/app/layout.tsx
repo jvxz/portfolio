@@ -5,6 +5,7 @@ import { Radio_Canada_Big } from "next/font/google";
 import Particles from "@/components/ui/particles";
 import { ViewTransitions } from "next-view-transitions";
 import Footer from "@/components/footer";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
 
 const radioCanadaBig = Radio_Canada_Big({
   subsets: ["latin"],
@@ -15,7 +16,7 @@ const radioCanadaBig = Radio_Canada_Big({
 export const metadata: Metadata = {
   title: "jamie jacobs",
   description: "jamie's portfolio!",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "https://github.com/jvxz.png" }],
 };
 
 export default function RootLayout({
@@ -32,6 +33,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </Providers>
+          <TailwindIndicator />
         </body>
       </html>
     </ViewTransitions>
