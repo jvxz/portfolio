@@ -101,7 +101,7 @@ function ProjectCard({
   sourceCode: string;
 }) {
   return (
-    <Card className="transition-colors">
+    <Card className="bg-card transition-colors">
       <CardHeader className="flex justify-between">
         <Link
           className="w-fit no-underline underline-offset-4 hover:underline"
