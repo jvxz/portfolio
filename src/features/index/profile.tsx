@@ -2,7 +2,10 @@ import MotionItem from "@/components/motion/motion-item";
 import ThemeToggle from "@/components/theme-toggle";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Icons } from "@/components/ui/icons";
 import { fadeStaggerChild } from "@/lib/constants";
+import { Link } from "next-view-transitions";
 
 export default function IndexProfile() {
   return (
@@ -28,7 +31,14 @@ export default function IndexProfile() {
             ))}
           </div>
         </div>
-        <ThemeToggle className="size-[32px]" />
+        <div className="flex items-center gap-1">
+          <Button size="icon" variant="ghost">
+            <Link href="https://github.com/jvxz/portfolio">
+              <Icons.GitHub />
+            </Link>
+          </Button>
+          <ThemeToggle className="size-[32px]" />
+        </div>
       </section>
       <section className="prose prose-neutral dark:prose-invert">
         <p>
