@@ -106,7 +106,7 @@ function ProjectCard({
           </div>
           <Button
             asChild
-            className="mr-8 hidden md:flex"
+            className="mr-8 hidden no-underline underline-offset-4 hover:underline md:flex"
             variant="link"
             size="icon"
           >
