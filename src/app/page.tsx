@@ -8,7 +8,7 @@ import IndexContact from "@/features/index/contact";
 export default function Page() {
   return (
     <MotionParent
-      className="mx-auto flex max-w-[350px] flex-col gap-12 sm:max-w-[450px] md:mx-6 md:max-w-screen-lg"
+      className="mx-auto flex max-w-[350px] flex-col gap-12 sm:max-w-[450px] md:mx-6 md:max-w-(--breakpoint-lg)"
       variants={fadeStaggerParent}
       initial="hidden"
       animate="show"
