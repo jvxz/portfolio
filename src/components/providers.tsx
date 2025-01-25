@@ -17,7 +17,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <RouterProvider navigate={(path, options) => router.push(path, options)}>
-      <ThemeProvider enableSystem attribute="class">
+      <ThemeProvider forcedTheme="light" attribute="class">
         {children}
       </ThemeProvider>
     </RouterProvider>
