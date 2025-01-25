@@ -1,18 +1,25 @@
 "use client";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ThemeProvider } from "next-themes";
 
-const queryClient = new QueryClient();
+import { useRouter } from "next/navigation";
+import { RouterProvider } from "react-aria-components";
+import { ThemeProvider } from "./theme-provider";
 
-export default function Providers({ children }: { children: React.ReactNode }) {
+declare module "react-aria-components" {
+  interface RouterConfig {
+    routerOptions: NonNullable<
+      Parameters<ReturnType<typeof useRouter>["push"]>[1]
+    >;
+  }
+}
+
+export function Providers({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
+
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      disableTransitionOnChange
-      enableSystem
-    >
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-    </ThemeProvider>
+    <RouterProvider navigate={(path, options) => router.push(path, options)}>
+      <ThemeProvider enableSystem attribute="class">
+        {children}
+      </ThemeProvider>
+    </RouterProvider>
   );
 }

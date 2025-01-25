@@ -1,4 +1,4 @@
-import Providers from "@/components/providers";
+import { Providers } from "@/components/providers";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import "@/styles/globals.css";
 import { type Metadata } from "next";
