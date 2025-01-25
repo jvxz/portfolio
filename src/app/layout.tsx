@@ -25,11 +25,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en" className={`${ibmPlexSans.variable}`}>
         <body className="relative min-h-screen overflow-x-hidden antialiased before:pointer-events-none before:absolute before:top-0 before:left-0 before:z-10 before:h-full before:w-full before:bg-[url('https://github.com/ui-layouts/uilayouts/blob/main/apps/ui-layout/public/noise.gif?raw=true')] before:opacity-[0.02] before:content-['']">
-          <Providers>
-            <main className="relative container mx-auto flex max-w-[625px] pt-24">
-              {children}
-            </main>
-          </Providers>
+          <Providers>{children}</Providers>
           <TailwindIndicator />
         </body>
       </html>
