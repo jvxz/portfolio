@@ -3,13 +3,20 @@ import { TailwindIndicator } from "@/components/tailwind-indicator";
 import "@/styles/globals.css";
 import { type Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
-import { IBM_Plex_Sans } from "next/font/google";
+import { IBM_Plex_Sans, Wittgenstein } from "next/font/google";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-ibm-plex-sans",
   weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
+
+const wittgenstein = Wittgenstein({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-wittgenstein",
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +30,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <ViewTransitions>
-      <html lang="en" className={`${ibmPlexSans.variable}`}>
+      <html
+        lang="en"
+        className={`${ibmPlexSans.variable} ${wittgenstein.variable}`}
+      >
         <body className="relative min-h-screen overflow-x-hidden antialiased before:pointer-events-none before:absolute before:top-0 before:left-0 before:z-10 before:h-full before:w-full before:bg-[url('https://github.com/ui-layouts/uilayouts/blob/main/apps/ui-layout/public/noise.gif?raw=true')] before:opacity-[0.02] before:content-['']">
           <Providers>{children}</Providers>
           <TailwindIndicator />
