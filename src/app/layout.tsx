@@ -3,13 +3,13 @@ import { TailwindIndicator } from "@/components/tailwind-indicator";
 import "@/styles/globals.css";
 import { type Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
-import { IBM_Plex_Sans, Wittgenstein } from "next/font/google";
+import { Radio_Canada_Big, Wittgenstein } from "next/font/google";
 
-const ibmPlexSans = IBM_Plex_Sans({
+const radioCanadaBig = Radio_Canada_Big({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-ibm-plex-sans",
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-radio-canada-big",
+  weight: ["400"],
 });
 
 const wittgenstein = Wittgenstein({
@@ -32,7 +32,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html
         lang="en"
-        className={`${ibmPlexSans.variable} ${wittgenstein.variable}`}
+        className={`${radioCanadaBig.variable} ${wittgenstein.variable}`}
       >
         <body className="relative min-h-screen overflow-x-hidden antialiased before:pointer-events-none before:absolute before:top-0 before:left-0 before:z-10 before:h-full before:w-full before:bg-[url('https://github.com/ui-layouts/uilayouts/blob/main/apps/ui-layout/public/noise.gif?raw=true')] before:opacity-[0.02] before:content-['']">
           <Providers>{children}</Providers>

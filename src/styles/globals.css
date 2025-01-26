@@ -9,7 +9,7 @@
 @plugin 'tailwindcss-react-aria-components';
 
 @theme {
-  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  --font-sans: "Radio Canada Big", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: "Wittgenstein", ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
@@ -63,47 +63,47 @@
 @layer base {
   :root {
     --bg: oklch(0.99 0.015 95);
-    --fg: oklch(0.141 0.02 95);
+    --fg: oklch(0.35 0.02 95);
 
-    --primary: oklch(0.141 0.02 95);
+    --primary: oklch(0.35 0.02 95);
     --primary-fg: oklch(0.99 0.015 95);
 
     --secondary: oklch(0.92 0.02 95);
-    --secondary-fg: oklch(0.141 0.02 95);
+    --secondary-fg: oklch(0.35 0.02 95);
 
     --overlay: oklch(0.99 0.015 95);
-    --overlay-fg: oklch(0.141 0.02 95);
+    --overlay-fg: oklch(0.35 0.02 95);
 
     --accent: oklch(0.92 0.02 95);
-    --accent-fg: oklch(0.141 0.02 95);
+    --accent-fg: oklch(0.35 0.02 95);
 
     --muted: oklch(0.97 0.015 95);
-    --muted-fg: oklch(0.552 0.02 95);
+    --muted-fg: oklch(0.65 0.02 95);
 
     --success: oklch(0.596 0.145 110);
     --success-fg: oklch(0.99 0.015 95);
 
     --warning: oklch(0.828 0.189 95);
-    --warning-fg: oklch(0.279 0.077 95);
+    --warning-fg: oklch(0.5 0.077 95);
 
     --danger: oklch(0.577 0.245 95);
     --danger-fg: oklch(0.98 0.02 95);
 
     --border: oklch(0.93 0.015 95);
     --input: oklch(0.90 0.015 95);
-    --ring: oklch(0.141 0.02 95);
+    --ring: oklch(0.35 0.02 95);
 
     --navbar: oklch(0.97 0.015 95);
-    --navbar-fg: oklch(0.141 0.02 95);
+    --navbar-fg: oklch(0.35 0.02 95);
 
     --sidebar: oklch(0.97 0.015 95);
-    --sidebar-fg: oklch(0.141 0.02 95);
+    --sidebar-fg: oklch(0.35 0.02 95);
 
-    --chart-1: oklch(0.21 0.02 95);
-    --chart-2: oklch(0.37 0.02 95);
-    --chart-3: oklch(0.442 0.02 95);
-    --chart-4: oklch(0.552 0.02 95);
-    --chart-5: oklch(0.705 0.02 95);
+    --chart-1: oklch(0.42 0.02 95);
+    --chart-2: oklch(0.57 0.02 95);
+    --chart-3: oklch(0.64 0.02 95);
+    --chart-4: oklch(0.75 0.02 95);
+    --chart-5: oklch(0.85 0.02 95);
 
     --radius-lg: 0.85rem;
     --radius-xs: calc(var(--radius-lg) * 0.5);
