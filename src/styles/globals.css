@@ -9,9 +9,9 @@
 @plugin 'tailwindcss-react-aria-components';
 
 @theme {
-  --font-sans: "Radio Canada Big", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  --font-sans: var(--next-font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: "Wittgenstein", ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji",
+  --font-serif: var(--next-font-serif), ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono: "Geist Mono", 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace';
 
